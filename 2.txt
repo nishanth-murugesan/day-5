@@ -1,0 +1,36 @@
+Convert all the strings to title caps in a string array:
+anonymous function :
+
+var titlecase = function(arr){
+      for(var i=0; i<arr.length; i++){
+          arr[i] = arr[i].toLowerCase();
+          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+      }
+      return arr;
+  }
+  console.log(titlecase(["GUVI", "geek", "aPPLe", "MaNgO"]));
+
+              *********
+IIFE:
+
+(function titlecase(arr){
+   for(var i=0; i<arr.length; i++){
+     arr[i] = arr[i].toLowerCase();
+     arr[i] = arr[i].charAt(0).toUpperCase()+arrr[i].slice(1);
+      }
+    console.log(arr);
+  
+  }) (["GUVI", "geek", "aPPLe", "MaNgO"]);
+
+              *********
+
+arrow function:
+
+var titlecase = (arr) => {
+      for(var i=0; i<arr.length; i++){
+          arr[i] = arr[i].toLowerCase();
+          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+      }
+      return arr;
+  }
+  console.log(titlecase(["GUVI", "geek", "aPPLe", "MaNgO"]));

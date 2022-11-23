@@ -1,0 +1,43 @@
+Print odd numbers in an array:
+
+anonymous function :
+
+var temp = [];
+  var odd = function(arr){
+      for(var i=0; i<arr.length; i++){
+          if(arr[i] %2 !=0){              
+              temp.push(arr[i]);
+          }
+      }
+      return temp;
+  }
+  console.log(odd([12,13,14,15]));
+
+              *******
+
+IIFE:
+
+var temp = [];
+  (function odd(arr){
+      for(var i=0; i<arr.length; i++){
+          if(arr[i] %2 !=0){
+              
+              temp.push(arr[i]);
+          }
+      }
+      console.log(temp);
+  }) ([12,13,14,15]);
+
+               *******
+arrow function:
+
+var temp = [];
+  var odd = (arr) => {
+      for(var i=0; i<arr.length; i++){
+          if(arr[i] %2 !=0){
+              temp.push(arr[i]);
+          }
+      }
+      return temp;
+  }
+  console.log(odd( [12,13,14,15] ));

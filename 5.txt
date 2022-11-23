@@ -1,0 +1,47 @@
+Return all the palindromes in an array:
+anonymous function:
+var temp = [];
+  var palindrome = function(arr){
+      for(var i=0; i<arr.length; i++){
+          var str = arr[i];
+          var rev = arr[i].split("").reverse().join("");
+          
+          if(str == rev){
+             temp.push(str);
+          }
+      }
+    return temp;
+  }
+  console.log(palindrome(["121", "madam", "424", "guvi", "dad"]));
+                           *************
+IIFE:
+var temp = [];
+  (function palindrome(arr){
+      for(var i=0; i<arr.length; i++){
+          var str = arr[i];
+          var rev = arr[i].split("").reverse().join("");
+          
+          if(str == rev){
+             temp.push(str);
+          }
+      }
+    console.log(temp);
+  }) (["121", "madam", "424", "guvi", "dad"]);
+
+               ***********
+
+arrow function:
+
+var temp = [];
+  var palindrome = (arr) => {
+      for(var i=0; i<arr.length; i++){
+          var str = arr[i];
+          var rev = arr[i].split("").reverse().join("");
+          
+          if(str == rev){
+             temp.push(str);
+          }
+      }
+    return temp;
+  }
+  console.log(palindrome(["121", "madam", "424", "guvi", "dad"]));
